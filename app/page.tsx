@@ -17,6 +17,8 @@ export default function Home() {
               <div className="flex space-x-4">
                 <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"><Link href='/signup'>Sign-up</Link></button>
                 <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><Link href='/login'>Login</Link></button>
+                <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><Link href='/signup/verify'>Verify</Link></button>
+                <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><Link href='/portal/profile'>Profile</Link></button>
               </div>
             </div>
             <div className="md:w-1/2">

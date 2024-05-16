@@ -17,8 +17,6 @@ export default function Home() {
               <div className="flex space-x-4">
                 <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"><Link href='/signup'>Sign-up</Link></button>
                 <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><Link href='/login'>Login</Link></button>
-                <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><Link href='/signup/verify'>Verify</Link></button>
-                <button className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><Link href='/portal/profile'>Profile</Link></button>
               </div>
             </div>
             <div className="md:w-1/2">
@@ -64,18 +62,16 @@ export default function Home() {
         {/* Student Reviews Section */}
         <section className="container mx-auto py-16">
           <h2 className="text-2xl font-bold mb-8 text-center">STUDENT REVIEWS</h2>
+          <p className="flex justify-center mb-4">This program offers top-tier experience for the students</p>
           <div className="flex justify-center space-x-4">
             <div className="text-center">
-              <Image src="/images/star.png" alt="Star Icon" className="h-8 mx-auto mb-2" width={55} height={100}/>
-              <p>Excellent</p>
+              <Image src="/images/star.png" alt="Star Icon" className="h-12 mx-auto mb-2" width={55} height={0}/>
             </div>
             <div className="text-center">
-              <Image src="/images/star.png" alt="Star Icon" className="h-8 mx-auto mb-2" width={55} height={100}/>
-              <p>Based on 485 reviews</p>
+              <Image src="/images/star.png" alt="Star Icon" className="h-12 mx-auto mb-2" width={55} height={0}/>
             </div>
             <div className="text-center">
-              <Image src="/images/star.png" alt="Star Icon" className="h-8 mx-auto mb-2" width={55} height={100}/>
-              <p>Trustpilot</p>
+              <Image src="/images/star.png" alt="Star Icon" className="h-12 mx-auto mb-2" width={55} height={0}/>
             </div>
           </div>
         </section>

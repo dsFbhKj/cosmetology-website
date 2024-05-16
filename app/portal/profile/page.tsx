@@ -1,27 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import CountryData from "./components/CountryData";
 export default function Profile() {
   return (
     <>
       <div className="flex flex-col items-center p-6">
       <div className="flex items-center justify-between w-full mb-6">
-        <button className="text-gray-600 hover:text-gray-800 focus:outline-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
+        <Link href="/">
+            <button className="text-gray-600 hover:text-gray-800 focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          </Link>
         <h1 className="text-xl font-semibold">Edit Profile</h1>
         <div className="w-6 h-6"></div>
       </div>
@@ -53,6 +55,10 @@ export default function Profile() {
             />
           </svg>
         </button>
+      </div>
+      <div className="w-full max-w-md mb-4">
+        <label htmlFor="avatar" className="block text-gray-700 font-semibold mb-2">Upload your image:</label>
+        <input className="" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
       </div>
       <div className="w-full max-w-md">
         <div className="mb-4">
@@ -96,17 +102,19 @@ export default function Profile() {
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="country" className="block text-gray-700 font-semibold mb-2">
-            Country/Region
-          </label>
-          <select
-            id="country"
-            value="USA"
-            className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="USA">USA</option>
-            {/* Add more options as needed */}
-          </select>
+          <label htmlFor="country" className="block text-gray-700 font-semibold mb-2">Country/Region</label>
+          <input list="countrydata" id="country" name="country" className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <datalist id="countrydata">
+                <option value="US" label="United States of America" />
+                <option value="CA" label="Canada" />
+                <option value="MX" label="Mexico" />
+                <option value="UK" label="United Kingdom" />
+                <option value="AU" label="Australia" />
+                <option value="NZ" label="New Zealand" />
+                <option value="JP" label="Japan" />
+                <option value="FR" label="France" />
+                <option value="DE" label="Germany" />
+            </datalist>
         </div>
         <button className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition-colors duration-300">
           Save changes

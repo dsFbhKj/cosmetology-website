@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className="flex space-x-4">
             <a href="/portal" className="hover:text-gray-400">My Portal</a>
             <a href="/bookings" className="hover:text-gray-400">Bookings</a>
-            <a href="/profile" className="hover:text-gray-400">Profile</a>
+            <a href="/portal/profile" className="hover:text-gray-400">Profile</a>
           </div>
         </nav>
       </header>
